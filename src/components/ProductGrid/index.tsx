@@ -2,7 +2,24 @@ import { FaTrash, FaEdit } from "react-icons/fa"
 import { toast } from "react-toastify"
 import axios from "axios"
 
-export default function ProductGrid({ product }) {
+export default function ProductGrid({ product, setProduct, setOnEdit }) {
+
+  const handleEdit = (item) => {
+    setOnEdit(item)
+  } 
+
+  const handleDelete = async (id) => {
+    await axios.delete("http://localhost:8800/estoque" + id)
+    .then(({ data }) => {
+      const newArray = product.filter((product) => product.id !== id)
+
+      setProduct(newArray)
+      toast.success(data)
+    })
+    .catch(({ data }) => toast.error(data))
+
+    setOnEdit(null)
+  }
 
   return (
     <table className="w-full bg-zinc-100 p-5 shadow-md rounded-md max-w-4xl my-5 mx-auto break-all">
@@ -25,11 +42,11 @@ export default function ProductGrid({ product }) {
             <td className="pt-4 text-start" width="20%">{item.amount}</td>
 
             <td className=" pt-4 text-start" align="center" width="5%">
-              <FaEdit />
+              <FaEdit onClick={() => handleEdit(item)} />
             </td>
 
             <td className="pt-4 text-start" align="center" width="5%">
-              <FaTrash/>
+              <FaTrash onClick={() => handleDelete(item.id)} />
               </td>
           </tr>
         ))}

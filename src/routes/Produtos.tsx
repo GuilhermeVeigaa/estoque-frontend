@@ -29,8 +29,8 @@ export default function Produtos() {
 
         <section className="w-full gap-3 flex flex-col justify-center items-center">
             <h1 className="text-3xl font-bold my-5">Produtos</h1>
-            <ProducForm />
-            <ProductGrid product={product} />
+            <ProducForm onEdit={onEdit} setOnEdit={setOnEdit} getProduct={getProduct} />
+            <ProductGrid product={product} setProduct={setProduct} setOnEdit={setOnEdit} />
         </section>
 
         <ToastContainer autoClose={3000} position={'bottom-left'} />
