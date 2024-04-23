@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import App from './App.tsx'
 import Home from './routes/Home.tsx'
 import Register from './routes/Register.tsx'
 import Login from './routes/Login.tsx'
 import Estoque from './routes/Estoque.tsx'
+import Produtos from './routes/Produtos.tsx'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
   {
     path: "estoque",
     element: <Estoque />
-  }, 
+  },
+  {
+    path: "produtos",
+    element: <Produtos />
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

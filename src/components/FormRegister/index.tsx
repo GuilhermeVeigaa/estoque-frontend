@@ -2,6 +2,7 @@
 
 import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from 'react-router-dom';
 
 export default function FormRegister() {
 
@@ -10,6 +11,8 @@ export default function FormRegister() {
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
+
+    const navigate = useNavigate()
 
     const handleRegister = async (e) => {
         e.preventDefault()
@@ -22,6 +25,7 @@ export default function FormRegister() {
                 }
             )
             setSuccess('Usuário cadastrado com sucesso')
+            return navigate("/login")
             
         } catch (error) {
             if (!error?.response) {
