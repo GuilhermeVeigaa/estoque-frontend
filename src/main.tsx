@@ -24,12 +24,12 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />
-      },
-      {
-        path: "estoque",
-        element: <Estoque />
-      },
+      }, 
     ]
+  },
+  {
+    path: "estoque",
+    element: <Estoque />
   }, 
 ])
 
