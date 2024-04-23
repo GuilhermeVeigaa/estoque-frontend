@@ -1,6 +1,6 @@
 # Frontend da aplicação
 
-Foram usandos o ReactJS, Vite e TypeScript e TailwindCSS
+Foram usandos o ReactJS, Vite, TypeScript e TailwindCSS
 
 ## React + TypeScript + Vite
 
