@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
+import ProducHeader from "../components/ProductHeader";
 
 export default function Estoque() {
   return (
-    <main className="w-full">
-      <header className="bg-red-700 h-20 w-full">
-          <h1 className="text-2xl font-bold text-center pt-4">Mind Stoque</h1>
-      </header>
+    <main className="w-full h-screen bg-slate-50">
+      <ProducHeader />
       <section className="my-44">
         <div className="w-full flex flex-col items-center">
           <Link to="/produtos">
