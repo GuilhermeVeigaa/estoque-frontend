@@ -12,7 +12,7 @@ export default function Vendas() {
             <p>quando eu recebi essa oportunidade eu estava no meio do processo de desenvolvimento de uma aplicação com stacks que eu não conhecia e virei noites estudando, (neste momento estou a 7 dias dormindo por 3/4 hora por conta disso kkk).</p>
             <p>Uma boa parte do conhecimento desse projeto apliquei aqui, ao qual passei bastente tempo estudando para desenvolver e me diverti muito desenvolvendo essa aplicação.</p>
             <br />
-            <p className="font-semibold text-lg">Ainda tenho muito o que aprender, e adoraria ter a oportunidade aprender com Devs exelentes como vocês, seria uma honra fazer parte do time de Devs da Mind para ter essa experiência de aprendizado com vocês, muito obrigado. </p>
+            <p className="font-semibold text-lg">Ainda tenho muito o que aprender, e adoraria ter a oportunidade aprender com Devs exelentes como vocês, seria uma honra fazer parte do time de Devs da Mind para ter essa experiência de aprendizado com vocês (já namoro a Mind a uns 2 anos kkkk), muito obrigado. </p>
         </section>
     </main>
   )
