@@ -15,10 +15,10 @@ export default function Estoque() {
         </div>
 
         <div className="w-full flex flex-col items-center">
-              <Link to="/register">
+              <Link to="/logs">
                 <button 
                 className="bg-red-500 w-80 h-12 max-h-20 p-1 font-bold text-white text-xl rounded-full shadow-lg mt-11" 
-                type="submit">Logs</button>
+                type="submit">Entradas e Saídas</button>
               </Link>
           </div>
         </section>

@@ -8,6 +8,7 @@ import Register from './routes/Register.tsx'
 import Login from './routes/Login.tsx'
 import Estoque from './routes/Estoque.tsx'
 import Produtos from './routes/Produtos.tsx'
+import Vendas from './routes/Vendas.tsx'
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "produtos",
     element: <Produtos />
+  },
+  {
+    path: "logs",
+    element: <Vendas />
   },
 ])
 

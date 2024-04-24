@@ -2,13 +2,17 @@
 
 import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function FormLogin() {
+
+    const navigate = useNavigate()
 
     const [email, setEmail]  =  useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
-    
+
+
 
     const handleLogin = async (e) => {
         e.preventDefault()
@@ -19,7 +23,9 @@ export default function FormLogin() {
                 {
                     headers: { 'Content-Type': 'application/json'}
                 }
-            )           
+            )
+        
+        return navigate("/estoque")
         } catch (error) {
             if (!error?.response) {
                 setError('Erro ao acessar o servidor')
